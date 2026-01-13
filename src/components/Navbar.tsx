@@ -19,9 +19,7 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 py-6 px-8 flex justify-between items-center bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm">
             <div className="text-2xl font-bold tracking-tighter flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full border-2 border-primary flex items-center justify-center">
-                    <span className="text-primary font-serif">S</span> {/* Logo proxy */}
-                </div>
+                {/* Logo removed */}
             </div>
 
             <div className="hidden md:flex gap-8 text-sm font-medium tracking-wide">

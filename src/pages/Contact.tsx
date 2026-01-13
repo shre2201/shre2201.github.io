@@ -1,12 +1,40 @@
 export default function Contact() {
     return (
-        <div className="pt-24 min-h-screen px-4 container mx-auto max-w-2xl">
-            <h1 className="text-4xl font-bold mb-6">Contact</h1>
-            <form className="space-y-4">
-                <input type="email" placeholder="Your Email" className="w-full bg-white/5 border border-white/10 p-3 rounded focus:outline-none focus:border-primary transition-colors" />
-                <textarea placeholder="Message" rows={5} className="w-full bg-white/5 border border-white/10 p-3 rounded focus:outline-none focus:border-primary transition-colors"></textarea>
-                <button className="bg-primary hover:bg-orange-600 text-white px-8 py-3 rounded-full font-bold transition-all">Send Message</button>
-            </form>
+        <div className="pt-32 min-h-screen px-4 container mx-auto max-w-4xl text-center">
+            <h1 className="text-6xl font-bold mb-8">Let's Connect</h1>
+            <p className="text-xl text-gray-400 mb-12">
+                Whether you have a question, a job offer, or just want to discuss the best pizza toppings.
+            </p>
+
+            <div className="bg-white/5 p-12 rounded-3xl border border-white/10 inline-block backdrop-blur-sm">
+                <div className="flex flex-col gap-6 items-center">
+
+                    {/* Email */}
+                    <a href="mailto:shreshth@example.com" className="text-2xl md:text-4xl font-bold text-primary hover:text-white transition-colors">
+                        shreshth@example.com
+                    </a>
+
+                    <div className="flex gap-8 mt-8">
+                        <a
+                            href="https://linkedin.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-blue-600 transition-all font-semibold"
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            href="https://github.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-gray-800 transition-all font-semibold"
+                        >
+                            GitHub
+                        </a>
+                    </div>
+
+                </div>
+            </div>
         </div>
     );
 }
