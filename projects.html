@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Shreshth Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-white font-sans selection:bg-primary selection:text-white relative page-fade">
+
+    <!-- Global Background -->
+    <div class="fixed-bg">
+        <img src="bg.png" alt="Background" class="bg-image">
+        <div class="bg-overlay scrolled" id="bg-overlay"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="navbar scrolled" id="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="projects.html" class="nav-link active">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn-outline">Send a message</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Projects Section -->
+            <section id="projects" class="page-section">
+                <div class="container animate-fade-up">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="grid grid-cols-2">
+                        <div class="project-card">
+                            <h3 class="project-title">Project Alpha</h3>
+                            <p class="project-description">A cutting-edge web application built with React and Node.js
+                                to solve problems you didn't know you had.</p>
+                            <div class="tag-container">
+                                <span class="tag">React</span>
+                                <span class="tag">Node</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">Neon Dashboard</h3>
+                            <p class="project-description">An analytics dashboard so bright it requires sunglasses.
+                                Real-time data visualization.</p>
+                            <div class="tag-container">
+                                <span class="tag">D3.js</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">E-Commerce One</h3>
+                            <p class="project-description">Full stack shopping experience. Because the world definitely
+                                needed another one.</p>
+                            <div class="tag-container">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Stripe</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">Portfolio v1</h3>
+                            <p class="project-description">The first iteration of this site. It was ugly, but it had a
+                                great personality.</p>
+                            <div class="tag-container">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Shreshth Agarwal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

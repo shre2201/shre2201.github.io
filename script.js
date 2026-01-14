@@ -1,93 +1,94 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set Year
+    // 1. Page Fade-in
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+    }, 100);
+
+    // 2. Set Year
     const yearElement = document.getElementById('year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
 
-    // Hero Reveal Animation
+    // 3. Hero Reveal Animation (for home page)
     const heroReveal = document.getElementById('hero-reveal');
     if (heroReveal) {
         setTimeout(() => {
             heroReveal.classList.add('reveal');
-        }, 100);
+        }, 300);
     }
 
-    // Navbar Scroll Effect
+    // 4. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
     const bgOverlay = document.getElementById('bg-overlay');
 
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
         if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(0, 0, 0, 0.9)';
-            bgOverlay.classList.add('scrolled');
+            navbar.classList.add('scrolled');
+            if (bgOverlay && !bgOverlay.classList.contains('scrolled')) {
+                bgOverlay.classList.add('scrolled');
+            }
         } else {
-            navbar.style.background = 'linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent)';
-            bgOverlay.classList.remove('scrolled');
+            // Only remove scrolled if we're on the home page hero
+            const isHomePage = window.location.pathname.endsWith('index.html') || window.location.pathname === '/portfolio/' || window.location.pathname.endsWith('/');
+            if (isHomePage) {
+                navbar.classList.remove('scrolled');
+                if (bgOverlay) bgOverlay.classList.remove('scrolled');
+            }
         }
-
-        // Background transition control
-        if (window.scrollY > window.innerHeight * 0.5) {
-            document.body.classList.remove('at-home');
-        } else {
-            document.body.classList.add('at-home');
-        }
-    });
-
-    // Active Link Tracking & Reveal Animations
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    const observerOptions = {
-        threshold: 0.3
     };
 
-    const sectionObserver = new IntersectionObserver((entries) => {
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    // 5. Intersection Observer for Scroll Animations
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-
-                // Update Nav links
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-
-                // Add at-home class if home is visible
-                if (id === 'home') {
-                    document.body.classList.add('at-home');
-                } else {
-                    document.body.classList.remove('at-home');
-                }
+                entry.target.classList.add('reveal');
+                // Once revealed, no need to observe anymore
+                revealObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    sections.forEach(section => {
-        sectionObserver.observe(section);
+    // Observe containers or specific elements
+    const animateElements = document.querySelectorAll('.animate-fade-up, .container, .project-card, .timeline-item');
+    animateElements.forEach(el => {
+        revealObserver.observe(el);
     });
 
-    // Smooth scroll for nav links (optional override if needed)
-    navLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // 6. Active Navigation Highlighting
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        // Simple match
+        if (currentPath.endsWith(linkPath) || (currentPath.endsWith('/') && linkPath === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+
+    // 7. Page Transition Effect for Internal Links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href.startsWith('http') || href.startsWith('mailto')) return;
+
             e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+            document.body.classList.remove('loaded');
 
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: 'smooth'
-                });
-
-                // Update URL hash
-                history.pushState(null, null, targetId);
-            }
+            setTimeout(() => {
+                window.location.href = href;
+            }, 600); // Match transition speed
         });
     });
-
-    // Initial state
-    document.body.classList.add('at-home');
 });

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreshth Agarwal - Home</title>
+    <title>Experience - Shreshth Agarwal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -16,17 +16,17 @@
     <!-- Global Background -->
     <div class="fixed-bg">
         <img src="bg.png" alt="Background" class="bg-image">
-        <div class="bg-overlay" id="bg-overlay"></div>
+        <div class="bg-overlay scrolled" id="bg-overlay"></div>
     </div>
 
     <div class="relative z-10">
         <!-- Navbar -->
-        <nav class="navbar" id="navbar">
+        <nav class="navbar scrolled" id="navbar">
             <div class="nav-container">
                 <div class="nav-links">
-                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                     <a href="about.html" class="nav-link">About</a>
-                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="experience.html" class="nav-link active">Experience</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="contact.html" class="nav-link">Contact</a>
                 </div>
@@ -37,20 +37,26 @@
         </nav>
 
         <main>
-            <!-- Hero Section -->
-            <section id="home" class="hero-section">
-                <div class="container container-hero">
-                    <div class="hero-content" id="hero-reveal">
-                        <h1 class="hero-title animate-text">SHRESHTHA</h1>
-                        <h1 class="hero-lastname animate-text-delayed">AGARWAL</h1>
+            <!-- Experience Section -->
+            <section id="experience" class="page-section">
+                <div class="container animate-fade-up">
+                    <h2 class="section-title">Experience</h2>
 
-                        <div class="hero-description animate-fade-up">
-                            <p>
-                                "I write code so I don't have to talk to people, but somehow I ended up building things
-                                that connect them.
-                                Part-time bug hunter, full-time coffee converter.
-                                Let's build something chaotic yet beautiful."
-                            </p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-primary"></div>
+                            <h3 class="item-title">Senior Full Stack Developer</h3>
+                            <p class="item-meta">Tech Corp / 2023 - Present</p>
+                            <p class="item-description">Leading frontend initiatives, refactoring legacy codebases, and
+                                mentoring junior devs to survive the JavaScript fatigue.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="item-title">Web Developer</h3>
+                            <p class="item-meta">Creative Agency / 2021 - 2023</p>
+                            <p class="item-description">Implemented pixel-perfect designs and optimized load times until
+                                the lighthouse score turned green.</p>
                         </div>
                     </div>
                 </div>
