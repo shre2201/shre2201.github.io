@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Shreshth Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-white font-sans selection:bg-primary selection:text-white relative page-fade">
+
+    <!-- Global Background -->
+    <div class="fixed-bg">
+        <img src="bg.png" alt="Background" class="bg-image">
+        <div class="bg-overlay scrolled" id="bg-overlay"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="navbar scrolled" id="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="projects.html" class="nav-link active">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn-outline">Send a message</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Projects Section -->
+            <section id="projects" class="page-section">
+                <div class="container animate-fade-up">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="grid grid-cols-2">
+                        <div class="project-card">
+                            <h3 class="project-title">ELI5 Chrome Extension </h3>
+                            <p class="project-description">Built a Chrome extension that generates simplified
+                                explanations of complex web content using a fine-tuned
+                                DistilBERT model trained on 50,000+ ELI5 question-answer pairs</p>
+                            <div class="tag-container">
+                                <span class="tag">React</span>
+                                <span class="tag">BERT LLM</span>
+                                <span class="tag">Transformers</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">Flipkart Review Sentiment Analysis</h3>
+                            <p class="project-description">Built a comprehensive sentiment analysis system to classify
+                                customer reviews from Flipkart as positive, negative, or
+                                neutral. Implemented web scraping techniques using BeautifulSoup to extract over 10,000
+                                product reviews from Flipkart</p>
+                            <div class="tag-container">
+                                <span class="tag">NLTK</span>
+                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">Flask</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">EV Vehicle Sales Analytics Dashboard</h3>
+                            <p class="project-description">Built a comprehensive analytics dashboard to analyze EV
+                                vehicle sales data from various sources, including government websites and market
+                                research reports. Implemented data visualization techniques using D3.js to create
+                                interactive charts and graphs that provide insights into the EV market trends.</p>
+                            <div class="tag-container">
+                                <span class="tag">Tableau</span>
+                                <span class="tag">Python</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">Portfolio v1</h3>
+                            <p class="project-description">The first iteration of this site. It was ugly, but it had a
+                                great personality.</p>
+                            <div class="tag-container">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Shreshtha Agarwal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

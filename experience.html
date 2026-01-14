@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Shreshth Agarwal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-white font-sans selection:bg-primary selection:text-white relative page-fade">
+
+    <!-- Global Background -->
+    <div class="fixed-bg">
+        <img src="bg.png" alt="Background" class="bg-image">
+        <div class="bg-overlay scrolled" id="bg-overlay"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="navbar scrolled" id="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="experience.html" class="nav-link active">Experience</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn-outline">Send a message</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Experience Section -->
+            <section id="experience" class="page-section">
+                <div class="container animate-fade-up">
+                    <h2 class="section-title">Experience</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-primary"></div>
+                            <h3 class="item-title">Blockchain Wallet developer</h3>
+                            <p class="item-meta">In-House / Oct 2025 - Jan 2026t</p>
+                            <p class="item-description">Leading wallet development for smart funding platform, deployed
+                                smart contracts on Hardhat and Ethereum, and
+                                tested on Sepolia testnet.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="item-title">Smart Contract Developer</h3>
+                            <p class="item-meta">In-House / June 2025 - Sep 2026t</p>
+                            <p class="item-description">Developed and deployed smart contracts for Auction use case and
+                                conducted a research for mitigating DOS attacks on smart contracts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Shreshtha Agarwal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

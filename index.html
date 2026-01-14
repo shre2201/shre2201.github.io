@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreshth Agarwal - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-white font-sans selection:bg-primary selection:text-white relative page-fade">
+
+    <!-- Global Background -->
+    <div class="fixed-bg">
+        <img src="bg.png" alt="Background" class="bg-image">
+        <div class="bg-overlay" id="bg-overlay"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="experience.html" class="nav-link">Experience</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn-outline">Send a message</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="container container-hero">
+                    <div class="hero-content" id="hero-reveal">
+                        <h1 class="hero-title animate-text">SHRESHTHA</h1>
+                        <h1 class="hero-lastname animate-text">AGARWAL</h1>
+
+                        <div class="hero-description animate-fade-up">
+                            <p>
+                                I write code so I don't have to talk to people, but somehow I ended up building things
+                                that connect them.
+                                Part-time data miner, full-time coffee converter.
+                                Let's build something chaotic yet beautiful.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Shreshtha Agarwal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
