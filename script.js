@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 window.location.href = href;
-            }, 600); // Match transition speed
+            }, 300); // Match transition speed
         });
     });
 });
