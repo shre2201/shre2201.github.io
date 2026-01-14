@@ -1,13 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreshth Agarwal - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-dark text-white font-sans selection:bg-primary selection:text-white relative">
+    
+    <!-- Global Background -->
+    <div class="fixed-bg">
+        <img src="bg.png" alt="Background" class="bg-image">
+        <div class="bg-overlay" id="bg-overlay"></div>
+    </div>
+
+    <div class="relative z-10">
+        <!-- Navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    <a href="#about" class="nav-link" data-section="about">About</a>
+                    <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                    <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                    <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                </div>
+                <div class="nav-cta">
+                    <a href="#contact" class="btn-outline">Send a message</a>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="container container-hero">
+                    <div class="hero-content" id="hero-reveal">
+                        <h1 class="hero-title">SHRESHTHA</h1>
+                        <h1 class="hero-lastname">AGARWAL</h1>
+                        
+                        <div class="hero-description">
+                            <p>
+                                "I write code so I don't have to talk to people, but somehow I ended up building things that connect them.
+                                Part-time bug hunter, full-time coffee converter.
+                                Let's build something chaotic yet beautiful."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="page-section">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-text">Passionate developer with a love for clean code and aesthetic design.</p>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="page-section">
+                <div class="container">
+                    <h2 class="section-title">Experience</h2>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot dot-primary"></div>
+                            <h3 class="item-title">Senior Full Stack Developer</h3>
+                            <p class="item-meta">Tech Corp / 2023 - Present</p>
+                            <p class="item-description">Leading frontend initiatives, refactoring legacy codebases, and mentoring junior devs to survive the JavaScript fatigue.</p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="item-title">Web Developer</h3>
+                            <p class="item-meta">Creative Agency / 2021 - 2023</p>
+                            <p class="item-description">Implemented pixel-perfect designs and optimized load times until the lighthouse score turned green.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="page-section">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+                    <div class="grid grid-cols-2">
+                        <div class="project-card">
+                            <h3 class="project-title">Project Alpha</h3>
+                            <p class="project-description">A cutting-edge web application built with React and Node.js to solve problems you didn't know you had.</p>
+                            <div class="tag-container">
+                                <span class="tag">React</span>
+                                <span class="tag">Node</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">Neon Dashboard</h3>
+                            <p class="project-description">An analytics dashboard so bright it requires sunglasses. Real-time data visualization.</p>
+                            <div class="tag-container">
+                                <span class="tag">D3.js</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">E-Commerce One</h3>
+                            <p class="project-description">Full stack shopping experience. Because the world definitely needed another one.</p>
+                            <div class="tag-container">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Stripe</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h3 class="project-title">Portfolio v1</h3>
+                            <p class="project-description">The first iteration of this site. It was ugly, but it had a great personality.</p>
+                            <div class="tag-container">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="page-section text-center">
+                <div class="container container-narrow">
+                    <h2 class="contact-title">Let's Connect</h2>
+                    <p class="contact-subtitle">
+                        Whether you have a question, a job offer, or just want to discuss the best pizza toppings.
+                    </p>
+
+                    <div class="contact-card">
+                        <div class="contact-links">
+                            <a href="mailto:shreshth@example.com" class="email-link">
+                                shreshth@example.com
+                            </a>
+
+                            <div class="social-links">
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn social-linkedin">
+                                    LinkedIn
+                                </a>
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn social-github">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> Shreshth Agarwal. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
